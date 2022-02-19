@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/aqi_nav"
+    app:startDestination="@id/selectedCityFragment">
+
+
+    <fragment
+        android:id="@+id/cityListFragment2"
+        android:name="com.assessment.proximity_assessment.home.ui.aqi.CityAQIFragments"
+        android:label="fragment_city_list"
+        tools:layout="@layout/fragment_city_a_q_i" >
+
+        <action
+            android:id="@+id/action_cityListFragment2_to_selectedCityFragment"
+            app:destination="@id/selectedCityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedCityFragment"
+        android:name="com.assessment.proximity_assessment.home.ui.city.SelectedCityFragment"
+        android:label="fragment_selected_city"
+        tools:layout="@layout/fragment_selected_city" >
+
+        <action
+            android:id="@+id/action_selectedCityFragment_to_cityListFragment2"
+            app:destination="@id/cityListFragment2" />
+    </fragment>
+
+</navigation>
